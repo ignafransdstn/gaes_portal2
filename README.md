@@ -1,6 +1,6 @@
 # gaes_portal
 
-A new Flutter project.
+GAES Portal is the use of the flutter framework for general service department services in companies where its use is related to many company activities. This application was created to facilitate these activities and make it also a forum for transparent reports to every employee and management within the company.
 
 ## Getting Started
 
