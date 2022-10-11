@@ -1,10 +1,10 @@
 // ignore_for_file: unnecessary_string_escapes
 
-import 'dart:async';
-import 'dart:io';
+// import 'dart:async';
+// import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:gaes_portal/main.dart';
-import 'package:url_launcher/url_launcher.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -47,18 +47,18 @@ class _SplashScreenState extends State<SplashScreen> {
                   fit: BoxFit.contain,
                 ),
                 ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => GaesPortalMainMenu()));
+                        builder: (context) => const GaesPortalMainMenu()));
               },
-              child: Text("Open Menu"),
+              child: const Text("Open Menu"),
               style: ElevatedButton.styleFrom(
-                  primary: Colors.blue[900],
-                  textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                  backgroundColor: Colors.blue[900],
+                  textStyle: const TextStyle(fontWeight: FontWeight.bold)),
             )
             // Text(
             //   'GAES Portal',

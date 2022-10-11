@@ -1,8 +1,8 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'dart:async';
+// import 'dart:async';
 import 'package:ionicons/ionicons.dart';
 
 class TranportPage extends StatefulWidget {
@@ -17,12 +17,12 @@ class _TranportPageState extends State<TranportPage> {
   Widget build(BuildContext context) {
     // const String _e_survey = 'https://forms.office.com/r/Ze8F7ySkfs';
     return Scaffold(
-        backgroundColor: Color.fromARGB(120, 41, 106, 247),
+        backgroundColor: const Color.fromARGB(120, 41, 106, 247),
         appBar: AppBar(
           elevation: 2,
-          backgroundColor: Color.fromARGB(255, 41, 106, 247),
+          backgroundColor: const Color.fromARGB(255, 41, 106, 247),
           title: Column(
-            children: [
+            children: const [
               Text("GAES Portal"),
               Text("General Affair E-System",
                   style: TextStyle(fontSize: 15, color: Colors.white70))
@@ -38,9 +38,9 @@ class _TranportPageState extends State<TranportPage> {
               Container(
                   width: MediaQuery.of(context).size.width * 0.40,
                   height: MediaQuery.of(context).size.height * 0.30,
-                  decoration: new BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Colors.blue[900],
-                    borderRadius: new BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(15),
                   ),
                   child: InkWell(
                     onTap: () {},
@@ -50,12 +50,12 @@ class _TranportPageState extends State<TranportPage> {
                         IconButton(
                           onPressed: () => launch(
                               'https://forms.office.com/r/Ze8F7ySkfs'),
-                          icon: Icon(Icons.checklist_rounded),
+                          icon: const Icon(Icons.checklist_rounded),
                           iconSize: 80,
                           color: Colors.white,
                           tooltip: 'E-P2H',
                         ),
-                        Text(
+                        const Text(
                           'E-P2H',
                           style: TextStyle(
                               fontSize: 30,
@@ -65,13 +65,13 @@ class _TranportPageState extends State<TranportPage> {
                       ],
                     ),
                   )),
-                  SizedBox(width: 20),
+                  const SizedBox(width: 20),
                   Container(
                       width: MediaQuery.of(context).size.width * 0.40,
                       height: MediaQuery.of(context).size.height * 0.30,
-                      decoration: new BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.blue[900],
-                        borderRadius: new BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                       child: InkWell(
                         onTap: () {},
@@ -81,12 +81,12 @@ class _TranportPageState extends State<TranportPage> {
                             IconButton(
                               onPressed: () => launch(
                                   'https://forms.office.com/r/bs4vncf540'),
-                              icon: Icon(Ionicons.car_sport),
+                              icon: const Icon(Ionicons.car_sport),
                               iconSize: 80,
                               color: Colors.white,
                               tooltip: 'E-Travel',
                             ),
-                            Text(
+                            const Text(
                               'E-Travel',
                               style: TextStyle(
                                   fontSize: 20,

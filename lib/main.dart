@@ -18,12 +18,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'GAES Portal',
-      home: SplashScreen(),
+      home: const SplashScreen(),
       routes: {
-        '/home': (context) => SplashScreen(),
+        '/home': (context) => const SplashScreen(),
         // '/transport': (context) => TransportPage(),
         // '/office_affairs': (context) => OfficeAffairsPage(),
       },
@@ -47,7 +47,7 @@ class _GaesPortalMainMenuState extends State<GaesPortalMainMenu> {
   int index = 0;
 
   @override
-  Widget build(BuildContext) {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: bodySection(),
       bottomNavigationBar: gaesPortalMainMenu(),
@@ -57,13 +57,13 @@ class _GaesPortalMainMenuState extends State<GaesPortalMainMenu> {
   bodySection() {
     switch (index) {
       case 0:
-        return HomePage();
+        return const HomePage();
       case 1:
-        return TranportPage();
+        return const TranportPage();
       case 2:
-        return OfficePage();
+        return const OfficePage();
       default:
-        return Dashboard();
+        return const Dashboard();
     }
   }
 
@@ -74,32 +74,32 @@ class _GaesPortalMainMenuState extends State<GaesPortalMainMenu> {
       onItemSelected: (index) => setState(() => this.index = index),
       items: [
         BottomNavyBarItem(
-          icon: Icon(Ionicons.clipboard_outline),
-          title: Text("E-Survey"),
-          activeColor: Color.fromARGB(255, 53, 107, 223),
+          icon: const Icon(Ionicons.clipboard_outline),
+          title: const Text("E-Survey"),
+          activeColor: const Color.fromARGB(255, 53, 107, 223),
           textAlign: TextAlign.justify
         ),
         BottomNavyBarItem(
-          icon: Icon(Icons.commute_sharp),
-          title: FittedBox(
+          icon: const Icon(Icons.commute_sharp),
+          title: const FittedBox(
             fit: BoxFit.fitWidth,
             child: Text("Transportation"),
           ),
-          activeColor: Color.fromARGB(255, 53, 107, 223),
+          activeColor: const Color.fromARGB(255, 53, 107, 223),
           textAlign: TextAlign.justify
         ),
         BottomNavyBarItem(
-          icon: Icon(Icons.local_grocery_store_rounded),
-          title: FittedBox(
+          icon: const Icon(Icons.local_grocery_store_rounded),
+          title: const FittedBox(
             fit: BoxFit.fitWidth,
             child: Text("Office Affairs"),
           ),
-          activeColor: Color.fromARGB(255, 53, 107, 223),
+          activeColor: const Color.fromARGB(255, 53, 107, 223),
         ),
         BottomNavyBarItem(
-          icon: Icon(Icons.dashboard_rounded),
-          title: Text("Dashboard"),
-          activeColor: Color.fromARGB(255, 53, 107, 223),
+          icon: const Icon(Icons.dashboard_rounded),
+          title: const Text("Dashboard"),
+          activeColor: const Color.fromARGB(255, 53, 107, 223),
 
         ),
       ],

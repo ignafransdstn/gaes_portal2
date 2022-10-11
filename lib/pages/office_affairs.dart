@@ -1,8 +1,8 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'dart:async';
+// import 'dart:async';
 import 'package:ionicons/ionicons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -18,12 +18,12 @@ class _OfficePageState extends State<OfficePage> {
   Widget build(BuildContext context) {
     // const String _e_survey = 'https://forms.office.com/r/Ze8F7ySkfs';
     return Scaffold(
-      backgroundColor: Color.fromARGB(120, 41, 106, 247),
+      backgroundColor: const Color.fromARGB(120, 41, 106, 247),
       appBar: AppBar(
         elevation: 2,
-        backgroundColor: Color.fromARGB(255, 41, 106, 247),
+        backgroundColor: const Color.fromARGB(255, 41, 106, 247),
         title: Column(
-          children: [
+          children: const [
             Text("GAES Portal"),
             Text("General Affair E-System",
                 style: TextStyle(fontSize: 15, color: Colors.white70))
@@ -32,14 +32,14 @@ class _OfficePageState extends State<OfficePage> {
         centerTitle: true,
       ),
       body: Container(
-        decoration: BoxDecoration(),
+        decoration: const BoxDecoration(),
         child: Column(children: [
           const SizedBox(height: 20),
           Expanded(
               child: Container(
             child: SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.only(left: 115, right: 20),
+                padding: const EdgeInsets.only(left: 115, right: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,9 +47,9 @@ class _OfficePageState extends State<OfficePage> {
                     Container(
                       width: MediaQuery.of(context).size.width * 0.40,
                       height: MediaQuery.of(context).size.height * 0.30,
-                      decoration: new BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.blue[900],
-                        borderRadius: new BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                       child: InkWell(
                         splashColor: Colors.blue,
@@ -60,12 +60,12 @@ class _OfficePageState extends State<OfficePage> {
                               IconButton(
                                 onPressed: () => launch(
                                     'https://forms.office.com/r/5UvyRkpfuJ'),
-                                icon: Icon(Ionicons.pencil_outline),
+                                icon: const Icon(Ionicons.pencil_outline),
                                 iconSize: 80,
                                 color: Colors.white,
                                 tooltip: 'E-STATIONERY',
                               ),
-                              Text(
+                              const Text(
                                 'E-STATIONERY',
                                 style: TextStyle(
                                     fontSize: 20,
@@ -75,13 +75,13 @@ class _OfficePageState extends State<OfficePage> {
                             ]),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.40,
                       height: MediaQuery.of(context).size.height * 0.30,
-                      decoration: new BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.blue[900],
-                        borderRadius: new BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                       child: InkWell(
                         onTap: () {},
@@ -91,12 +91,12 @@ class _OfficePageState extends State<OfficePage> {
                               IconButton(
                                 onPressed: () => launch(
                                     'https://forms.office.com/r/4jspJwqm3U'),
-                               icon: const FaIcon(FontAwesomeIcons.bucket),
+                                icon: const FaIcon(FontAwesomeIcons.bucket),
                                 iconSize: 80,
                                 color: Colors.white,
                                 tooltip: 'E-GROCERIES',
                               ),
-                              Text(
+                              const Text(
                                 'E-GROCERIES',
                                 style: TextStyle(
                                     fontSize: 20,
@@ -106,13 +106,13 @@ class _OfficePageState extends State<OfficePage> {
                             ]),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.40,
                       height: MediaQuery.of(context).size.height * 0.30,
-                      decoration: new BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.blue[900],
-                        borderRadius: new BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                       child: InkWell(
                         onTap: () {},
@@ -127,7 +127,7 @@ class _OfficePageState extends State<OfficePage> {
                                 color: Colors.white,
                                 tooltip: 'E-WORK REQUESTS',
                               ),
-                              Text(
+                              const Text(
                                 'E-WORK REQUESTS',
                                 style: TextStyle(
                                     fontSize: 13,
