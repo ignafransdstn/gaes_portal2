@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:gaes_portal/pages/home_page.dart';
-import 'package:gaes_portal/pages/transport_page.dart';
-import 'package:gaes_portal/pages/office_affairs.dart';
-import 'package:gaes_portal/pages/dashboard.dart';
-// import 'package:flutter_icons/flutter_icons.dart';
-// import 'package:flutter_icons_null_safety/flutter_icons_null_safety.dart';
+import 'package:gaes_portal/view/dashboard_page.dart';
+import 'package:gaes_portal/view/services_page.dart';
+import 'package:gaes_portal/view/splash_page.dart';
+
+import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:gaes_portal/splash_screen.dart';
+
+import 'controller/screen_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,91 +17,84 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'GAES Portal',
-      home: const SplashScreen(),
-      routes: {
-        '/home': (context) => const SplashScreen(),
-        // '/transport': (context) => TransportPage(),
-        // '/office_affairs': (context) => OfficeAffairsPage(),
-      },
-      // initialRoute: '/',
-      // routes: {
-      //   '/': (context) => GaesPortalMainMenu(),
-      //   // GaesPortalMainMenu.id: (context) => GaesPortalMainMenu(),
-      // },
+      getPages: AppPage.pages,
+      home: const SplashView(),
     );
   }
 }
 
-class GaesPortalMainMenu extends StatefulWidget {
-  const GaesPortalMainMenu({Key? key}) : super(key: key);
+class MainView extends StatefulWidget {
+  const MainView({Key? key}) : super(key: key);
 
   @override
-  _GaesPortalMainMenuState createState() => _GaesPortalMainMenuState();
+  // ignore: library_private_types_in_public_api
+  _MainViewState createState() => _MainViewState();
 }
 
-class _GaesPortalMainMenuState extends State<GaesPortalMainMenu> {
+class _MainViewState extends State<MainView> {
   int index = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: bodySection(),
-      bottomNavigationBar: gaesPortalMainMenu(),
+      bottomNavigationBar: mainMenu(),
     );
   }
 
   bodySection() {
     switch (index) {
       case 0:
-        return const HomePage();
-      case 1:
-        return const TranportPage();
-      case 2:
-        return const OfficePage();
+        return const ServicesView();
       default:
-        return const Dashboard();
+        return const DashboardView();
     }
   }
 
-  gaesPortalMainMenu() {
-    return BottomNavyBar(
-      selectedIndex: index,
-      showElevation: true,
-      onItemSelected: (index) => setState(() => this.index = index),
-      items: [
-        BottomNavyBarItem(
-          icon: const Icon(Ionicons.clipboard_outline),
-          title: const Text("E-Survey"),
-          activeColor: const Color.fromARGB(255, 53, 107, 223),
-          textAlign: TextAlign.justify
+  mainMenu() {
+    return BottomNavigationBar(
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Ionicons.grid_outline),
+          label: "SERVICES",
+          backgroundColor: Color.fromARGB(255, 41, 106, 247)
         ),
-        BottomNavyBarItem(
-          icon: const Icon(Icons.commute_sharp),
-          title: const FittedBox(
-            fit: BoxFit.fitWidth,
-            child: Text("Transportation"),
-          ),
-          activeColor: const Color.fromARGB(255, 53, 107, 223),
-          textAlign: TextAlign.justify
-        ),
-        BottomNavyBarItem(
-          icon: const Icon(Icons.local_grocery_store_rounded),
-          title: const FittedBox(
-            fit: BoxFit.fitWidth,
-            child: Text("Office Affairs"),
-          ),
-          activeColor: const Color.fromARGB(255, 53, 107, 223),
-        ),
-        BottomNavyBarItem(
-          icon: const Icon(Icons.dashboard_rounded),
-          title: const Text("Dashboard"),
-          activeColor: const Color.fromARGB(255, 53, 107, 223),
-
+        BottomNavigationBarItem(
+          icon: Icon(Icons.dashboard_rounded),
+          label: "DASHBOARD",
+          backgroundColor: Color.fromARGB(255, 13, 42, 102)
         ),
       ],
+      currentIndex: index,
+      onTap: (index) => setState(() => this.index = index),
     );
+    // return BottomNavyBar(
+    //   selectedIndex: index,
+    //   showElevation: true,
+    //   items: [
+    //     BottomNavyBarItem(
+    //       icon: const Icon(Ionicons.grid_outline),
+    //       title: const FittedBox(
+    //         fit: BoxFit.fitWidth,
+    //         child: Text('SERVICES'),
+    //       ),
+    //       activeColor: const Color.fromARGB(255, 53, 107, 223),
+    //       textAlign: TextAlign.justify,
+    //     ),
+    //     BottomNavyBarItem(
+    //       icon: const Icon(Icons.dashboard_rounded),
+    //       title: const FittedBox(
+    //         fit: BoxFit.fitWidth,
+    //         child: Text("DASHBOARD"),
+    //       ),
+    //       activeColor: const Color.fromARGB(255, 53, 107, 223),
+    //       textAlign: TextAlign.justify,
+    //     ),
+    //   ],
+    //   onItemSelected: (index) => setState(() => this.index = index),
+    // );
   }
 }

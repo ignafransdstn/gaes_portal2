@@ -3,9 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-// import 'package:ionicons/ionicons.dart';
-// import 'package:webview_flutter/webview_flutter.dart';
-// import 'package:webviewx/webviewx.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,28 +12,30 @@ Future main() async {
   }
 }
 
-class Dashboard extends StatefulWidget {
-  const Dashboard({Key? key}) : super(key: key);
+// ignore: camel_case_types
+class eWr extends StatefulWidget {
+  const eWr({Key? key}) : super(key: key);
 
   @override
-  State<Dashboard> createState() => _Dashboard();
+  State<eWr> createState() => _eWr();
 }
 
-class _Dashboard extends State<Dashboard> {
-  // late WebViewXController webViewXController;
-
+// ignore: camel_case_types
+class _eWr extends State<eWr> {
+  // Backend
   final GlobalKey webViewkey = GlobalKey();
 
   InAppWebViewController? webViewController;
   InAppWebViewGroupOptions options = InAppWebViewGroupOptions(
-      crossPlatform: InAppWebViewOptions(
-        useShouldOverrideUrlLoading: true,
-        mediaPlaybackRequiresUserGesture: false,
-      ),
-      android: AndroidInAppWebViewOptions(
-        useHybridComposition: true,
-      ),
-      ios: IOSInAppWebViewOptions(allowsInlineMediaPlayback: true));
+    crossPlatform: InAppWebViewOptions(
+      useShouldOverrideUrlLoading: true,
+      mediaPlaybackRequiresUserGesture: false,
+    ),
+    android: AndroidInAppWebViewOptions(
+      useHybridComposition: true,
+    ),
+    ios: IOSInAppWebViewOptions(allowsInlineMediaPlayback: true),
+  );
 
   late PullToRefreshController pullToRefreshController;
   String url = "";
@@ -54,7 +53,10 @@ class _Dashboard extends State<Dashboard> {
           webViewController?.reload();
         } else if (Platform.isIOS) {
           webViewController?.loadUrl(
-              urlRequest: URLRequest(url: await webViewController?.getUrl()));
+            urlRequest: URLRequest(
+              url: await webViewController?.getUrl(),
+            ),
+          );
         }
       },
     );
@@ -65,9 +67,9 @@ class _Dashboard extends State<Dashboard> {
     super.dispose();
   }
 
+  // Frontend
   @override
   Widget build(BuildContext context) {
-    // const String _e_survey = 'https://forms.office.com/r/Ze8F7ySkfs';
     return Scaffold(
       backgroundColor: const Color.fromARGB(120, 41, 106, 247),
       appBar: AppBar(
@@ -75,9 +77,11 @@ class _Dashboard extends State<Dashboard> {
         backgroundColor: const Color.fromARGB(255, 41, 106, 247),
         title: Column(
           children: const [
-            Text("GAES Portal"),
-            Text("General Affair E-System",
-                style: TextStyle(fontSize: 15, color: Colors.white70))
+            Text("GAES PORTAL"),
+            Text(
+              "E-WORK REQUEST",
+              style: TextStyle(fontSize: 15, color: Colors.white70),
+            ),
           ],
         ),
         centerTitle: true,
@@ -88,8 +92,7 @@ class _Dashboard extends State<Dashboard> {
             InAppWebView(
               key: webViewkey,
               initialUrlRequest: URLRequest(
-                url: Uri.parse(
-                    "https://app.powerbi.com/reportEmbed?reportId=bc092132-a76b-4577-ae41-8e71a510bd88&autoAuth=true&ctid=bbb8da8f-f374-490f-9190-2242176e117c&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLWVhc3QtYXNpYS1hLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D"),
+                url: Uri.parse("https://forms.office.com/r/u7QRT0jV9k"),
               ),
             ),
           ],
