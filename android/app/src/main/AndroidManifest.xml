@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gaes_portal">
    <application
-        android:label="gaes_portal"
+        android:label="GAES Portal App"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
