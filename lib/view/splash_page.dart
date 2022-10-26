@@ -53,6 +53,17 @@ class _SplashViewState extends State<SplashView> {
           const SizedBox(
             height: 20,
           ),
+          const Center(
+            child: Text(
+              "GAES",
+              style: TextStyle(
+                fontSize: 50,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                color: Color.fromARGB(199, 6, 53, 155),
+              ),
+            ),
+          ),
         ],
       ),
     );
