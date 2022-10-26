@@ -3,9 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-// import 'package:ionicons/ionicons.dart';
-// import 'package:webview_flutter/webview_flutter.dart';
-// import 'package:webviewx/webviewx.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();

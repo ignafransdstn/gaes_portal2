@@ -69,32 +69,10 @@ class _MainViewState extends State<MainView> {
         ),
       ],
       currentIndex: index,
+      selectedItemColor: Colors.white,
+      selectedLabelStyle: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+      backgroundColor: const Color.fromARGB(255, 41, 106, 247),
       onTap: (index) => setState(() => this.index = index),
     );
-    // return BottomNavyBar(
-    //   selectedIndex: index,
-    //   showElevation: true,
-    //   items: [
-    //     BottomNavyBarItem(
-    //       icon: const Icon(Ionicons.grid_outline),
-    //       title: const FittedBox(
-    //         fit: BoxFit.fitWidth,
-    //         child: Text('SERVICES'),
-    //       ),
-    //       activeColor: const Color.fromARGB(255, 53, 107, 223),
-    //       textAlign: TextAlign.justify,
-    //     ),
-    //     BottomNavyBarItem(
-    //       icon: const Icon(Icons.dashboard_rounded),
-    //       title: const FittedBox(
-    //         fit: BoxFit.fitWidth,
-    //         child: Text("DASHBOARD"),
-    //       ),
-    //       activeColor: const Color.fromARGB(255, 53, 107, 223),
-    //       textAlign: TextAlign.justify,
-    //     ),
-    //   ],
-    //   onItemSelected: (index) => setState(() => this.index = index),
-    // );
   }
 }
