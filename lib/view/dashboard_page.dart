@@ -56,7 +56,7 @@ class DashboardView extends GetView<DashboardView> {
                               ),
                             );
                           },
-                          icon: const Icon(Ionicons.clipboard),
+                          icon: const Icon(Ionicons.home_outline),
                           iconSize: 50,
                           color: Colors.white,
                           tooltip: 'MESS',
