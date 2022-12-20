@@ -102,47 +102,10 @@ class ServicesView extends GetView<ServicesView> {
                           icon: const Icon(Ionicons.restaurant_outline),
                           iconSize: 50,
                           color: Colors.white,
-                          tooltip: 'NATURA',
+                          tooltip: 'E-MEALS',
                         ),
                         const Text(
-                          'NATURA',
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(120, 41, 106, 247),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: InkWell(
-                    splashColor: const Color.fromARGB(255, 41, 106, 247),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const eP2h(),
-                              ),
-                            );
-                          },
-                          icon: const Icon(Icons.checklist_rounded),
-                          iconSize: 50,
-                          color: Colors.white,
-                          tooltip: 'E-P2H',
-                        ),
-                        const Text(
-                          'E-P2H',
+                          'E-MEALS',
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.white,
@@ -180,6 +143,43 @@ class ServicesView extends GetView<ServicesView> {
                         ),
                         const Text(
                           'E-TRAVEL',
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(120, 41, 106, 247),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: InkWell(
+                    splashColor: const Color.fromARGB(255, 41, 106, 247),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const eP2h(),
+                              ),
+                            );
+                          },
+                          icon: const Icon(Icons.checklist_rounded),
+                          iconSize: 50,
+                          color: Colors.white,
+                          tooltip: 'E-P2H',
+                        ),
+                        const Text(
+                          'E-P2H',
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.white,
