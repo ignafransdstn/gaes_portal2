@@ -4,6 +4,7 @@ import 'package:gaes_portal/view/form/natura.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 
+import 'form/e_ftw.dart';
 import 'form/e_groceries.dart';
 import 'form/e_p2h.dart';
 import 'form/e_stationery.dart';
@@ -169,6 +170,43 @@ class ServicesView extends GetView<ServicesView> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
+                                builder: (context) => const eStationery(),
+                              ),
+                            );
+                          },
+                          icon: const Icon(Ionicons.pencil_outline),
+                          iconSize: 50,
+                          color: Colors.white,
+                          tooltip: 'E-STATIONERY',
+                        ),
+                        const Text(
+                          'E-STATIONERY',
+                          style: TextStyle(
+                            fontSize: 10,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(120, 41, 106, 247),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: InkWell(
+                    splashColor: const Color.fromARGB(255, 41, 106, 247),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
                                 builder: (context) => const eP2h(),
                               ),
                             );
@@ -206,19 +244,19 @@ class ServicesView extends GetView<ServicesView> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const eStationery(),
+                                builder: (context) => const eFtw(),
                               ),
                             );
                           },
-                          icon: const Icon(Ionicons.pencil_outline),
+                          icon: const Icon(Ionicons.body_outline),
                           iconSize: 50,
                           color: Colors.white,
-                          tooltip: 'E-STATIONERY',
+                          tooltip: 'E-FIT TO WORK',
                         ),
                         const Text(
-                          'E-STATIONERY',
+                          'E-FIT TO WORK',
                           style: TextStyle(
-                            fontSize: 10,
+                            fontSize: 13,
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
