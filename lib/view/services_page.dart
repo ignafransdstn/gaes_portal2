@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:gaes_portal/view/form/e_fuellvfuel.dart';
 import 'package:gaes_portal/view/form/natura.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
@@ -260,6 +261,46 @@ class ServicesView extends GetView<ServicesView> {
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(120, 41, 106, 247),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: InkWell(
+                    splashColor: const Color.fromARGB(255, 41, 106, 247),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const eFuelLv(),
+                              ),
+                            );
+                          },
+                          icon: const Icon(Ionicons.water_outline),
+                          iconSize: 50,
+                          color: Colors.white,
+                          tooltip: 'FUEL CONSUMTION RECORD',
+                        ),
+                        const Align(
+                          alignment: Alignment.center,
+                          child :Text(
+                          'FUEL RECORD',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         ),
                       ],
                     ),

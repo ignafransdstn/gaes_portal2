@@ -12,6 +12,7 @@ Future main() async {
   }
 }
 
+// ignore: camel_case_types
 class eFuelLv extends StatefulWidget {
   const eFuelLv({Key? key}) : super(key: key);
 
@@ -19,6 +20,7 @@ class eFuelLv extends StatefulWidget {
   State<eFuelLv> createState() => _eFuelLv();
 }
 
+// ignore: camel_case_types
 class _eFuelLv extends State<eFuelLv> {
   final GlobalKey webViewkey = GlobalKey();
 
@@ -88,7 +90,7 @@ class _eFuelLv extends State<eFuelLv> {
             InAppWebView(
               key: webViewkey,
               initialUrlRequest: URLRequest(
-                url: Uri.parse(""),
+                url: Uri.parse("https://forms.office.com/r/Lb97pgrAcX"),
               ),
             ),
           ],
