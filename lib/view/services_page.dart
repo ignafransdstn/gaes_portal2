@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gaes_portal/view/form/e_fuellvfuel.dart';
+import 'package:gaes_portal/view/form/e_lv_status.dart';
 import 'package:gaes_portal/view/form/natura.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
@@ -67,10 +68,10 @@ class ServicesView extends GetView<ServicesView> {
                           icon: const Icon(Ionicons.clipboard),
                           iconSize: 50,
                           color: Colors.white,
-                          tooltip: 'E-SURVEY',
+                          tooltip: 'SURVEY',
                         ),
                         const Text(
-                          'E-SURVEY',
+                          'SURVEY',
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.white,
@@ -104,12 +105,12 @@ class ServicesView extends GetView<ServicesView> {
                           icon: const Icon(Ionicons.restaurant_outline),
                           iconSize: 50,
                           color: Colors.white,
-                          tooltip: 'E-MEALS',
+                          tooltip: 'MEALS',
                         ),
                         const Text(
-                          'E-MEALS',
+                          'MEALS NATURA',
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 12,
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
@@ -141,10 +142,10 @@ class ServicesView extends GetView<ServicesView> {
                           icon: const Icon(Ionicons.car_sport),
                           iconSize: 50,
                           color: Colors.white,
-                          tooltip: 'E-TRAVEL',
+                          tooltip: 'TRAVEL',
                         ),
                         const Text(
-                          'E-TRAVEL',
+                          'TRAVEL',
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.white,
@@ -178,10 +179,10 @@ class ServicesView extends GetView<ServicesView> {
                           icon: const Icon(Ionicons.pencil_outline),
                           iconSize: 50,
                           color: Colors.white,
-                          tooltip: 'E-STATIONERY',
+                          tooltip: 'STATIONERY',
                         ),
                         const Text(
-                          'E-STATIONERY',
+                          'STATIONERY',
                           style: TextStyle(
                             fontSize: 10,
                             color: Colors.white,
@@ -215,10 +216,47 @@ class ServicesView extends GetView<ServicesView> {
                           icon: const Icon(Icons.checklist_rounded),
                           iconSize: 50,
                           color: Colors.white,
-                          tooltip: 'E-P2H',
+                          tooltip: 'P2H',
                         ),
                         const Text(
-                          'E-P2H',
+                          'P2H',
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(120, 41, 106, 247),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: InkWell(
+                    splashColor: const Color.fromARGB(255, 41, 106, 247),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const eLvStatus(),
+                              ),
+                            );
+                          },
+                          icon: const Icon(FontAwesomeIcons.truckMonster),
+                          iconSize: 40,
+                          color: Colors.white,
+                          tooltip: "STATUS LV",
+                        ),
+                        const Text(
+                          'LV STATUS',
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.white,
@@ -252,10 +290,10 @@ class ServicesView extends GetView<ServicesView> {
                           icon: const Icon(Ionicons.body_outline),
                           iconSize: 50,
                           color: Colors.white,
-                          tooltip: 'E-FIT TO WORK',
+                          tooltip: 'FIT TO WORK',
                         ),
                         const Text(
-                          'E-FIT TO WORK',
+                          'FIT TO WORK',
                           style: TextStyle(
                             fontSize: 13,
                             color: Colors.white,
@@ -293,14 +331,14 @@ class ServicesView extends GetView<ServicesView> {
                         ),
                         const Align(
                           alignment: Alignment.center,
-                          child :Text(
-                          'FUEL RECORD',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                          child: Text(
+                            'FUEL RECORD',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -329,10 +367,10 @@ class ServicesView extends GetView<ServicesView> {
                           icon: const FaIcon(FontAwesomeIcons.bucket),
                           iconSize: 50,
                           color: Colors.white,
-                          tooltip: 'E-GROCERIES',
+                          tooltip: 'GROCERIES',
                         ),
                         const Text(
-                          'E-GROCERIES',
+                          'GROCERIES',
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.white,
@@ -366,10 +404,10 @@ class ServicesView extends GetView<ServicesView> {
                           icon: const Icon(Ionicons.construct_outline),
                           iconSize: 50,
                           color: Colors.white,
-                          tooltip: 'E-WORK REQUEST',
+                          tooltip: 'WORK REQUEST',
                         ),
                         const Text(
-                          'E-WORK REQUEST',
+                          'WORK REQUEST',
                           style: TextStyle(
                             fontSize: 10,
                             color: Colors.white,
