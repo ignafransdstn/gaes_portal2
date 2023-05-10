@@ -11,6 +11,7 @@ Future main() async {
   }
 }
 
+// ignore: camel_case_types
 class eLvStatus extends StatefulWidget {
   const eLvStatus({Key? key}) : super(key: key);
 
@@ -18,6 +19,7 @@ class eLvStatus extends StatefulWidget {
   State<eLvStatus> createState() => _eLvStatusState();
 }
 
+// ignore: camel_case_types
 class _eLvStatusState extends State<eLvStatus> {
   final GlobalKey webViewkey = GlobalKey();
 
